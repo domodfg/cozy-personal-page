@@ -5,20 +5,22 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const ProjectDetail = (props) => {
   gsap.registerPlugin(ScrollTrigger);
   const ref = useRef(null);
+  
   useEffect(() => {
     const element = ref.current;
     gsap.fromTo(
-      element.querySelector(".projectdetail"),
+      element.querySelector(".projectdescription"),
       {
-        y: -20,
+        y: 100,
       },
       {
         y: 0,
         scrollTrigger: {
-          scroller: ".projectlist",
-          trigger: element.querySelector(".project"),
+          scroller: document.querySelector(".projectlistContainer"),
+          trigger: element,
           start: "top top",
           end: "bottom center",
+          ease: "power3.out",
           scrub: true,
         },
       }
@@ -26,8 +28,8 @@ const ProjectDetail = (props) => {
   }, []);
   return (
     <li className="project" ref={ref}>
-      <img className="projectdetail" src={props.image} alt="project" />
-      <div className="projectdescription">lorem ipsum weofjsjodfho</div>
+      <img className="projectimage" src={props.image} alt="project" />
+      <div className="projectdescription">{props.text}</div>
     </li>
   );
 };

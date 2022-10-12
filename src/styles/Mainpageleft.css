@@ -1,8 +1,11 @@
 .mainpageleft {
+  display: flex;
+  flex-direction: column;
   gap: 3vh;
   font-size: 1.1rem;
   padding-right: 1.5rem;
   position: relative;
+  height: 100vh;
 }
 
 .header {
@@ -13,13 +16,4 @@
 .mainpageleft div:nth-child(1),
 .mainpageleft div:nth-child(3) {
   flex: 1;
-}
-
-.maincontentwrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: fixed;
-  width: 25%;
-  height: 100vh;
 }

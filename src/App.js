@@ -5,10 +5,9 @@ import ProjectList from "./components/ProjectList.js";
 
 function App() {
   return (
-    <div className="App container">
+    <div className="App container-fluid">
       <Mainpageleft />
       <ProjectList />
-      <div></div>
     </div>
   );
 }

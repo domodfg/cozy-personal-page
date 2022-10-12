@@ -3,7 +3,6 @@ import "../styles/Mainpageleft.css";
 function Mainpageleft() {
   return (
     <main className="mainpageleft">
-      <div className="maincontentwrapper">
         <div className="header">Domo's cozy website</div>
         <section>
           <h1>About Me</h1>
@@ -21,7 +20,6 @@ function Mainpageleft() {
           <hr />
         </section>
         <div></div>
-      </div>
     </main>
   );
 }
